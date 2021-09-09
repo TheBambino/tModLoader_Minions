@@ -59,7 +59,7 @@ namespace AmuletOfManyMinions.NPCs
 				}
 			}
 
-			if (spawnChance < 0.05f && NPCSets.preHardmodeIceEnemies.Contains(npc.netID))
+			if (spawnChance < 0.007f && NPCSets.preHardmodeIceEnemies.Contains(npc.netID))
 			{
 				Item.NewItem(npc.getRect(), ItemType<VikingSquireMinionItem>(), 1);
 			}
@@ -70,62 +70,62 @@ namespace AmuletOfManyMinions.NPCs
 				Item.NewItem(npc.getRect(), ItemType<GraniteSpark>(), amount);
 			}
 
-			if (spawnChance < 0.12f && npc.type == NPCID.ManEater)
+			if (spawnChance < 0.04f && npc.type == NPCID.ManEater)
 			{
 				Item.NewItem(npc.getRect(), ItemType<AncientCobaltSquireMinionItem>(), 1, prefixGiven: -1);
 			}
 
-			if (spawnChance < 0.04f && NPCSets.hornets.Contains(npc.netID))
+			if (spawnChance < 0.008f && NPCSets.hornets.Contains(npc.netID))
 			{
 				Item.NewItem(npc.getRect(), ItemType<AncientCobaltSquireMinionItem>(), 1, prefixGiven: -1);
 			}
 
-			if (spawnChance < 0.015f && NPCSets.angryBones.Contains(npc.netID))
+			if (spawnChance < 0.008f && NPCSets.angryBones.Contains(npc.netID))
 			{
 				Item.NewItem(npc.getRect(), ItemType<BoneSquireMinionItem>(), 1, prefixGiven: -1);
 			}
 
-			if (spawnChance < 0.12f && npc.type == NPCID.AngryNimbus)
+			if (spawnChance < 0.07f && npc.type == NPCID.AngryNimbus)
 			{
 				Item.NewItem(npc.getRect(), ItemType<StoneCloudMinionItem>(), 1, prefixGiven: -1);
 			}
 
-			if (spawnChance < 0.05f && npc.type == NPCID.GiantBat)
+			if (spawnChance < 0.009f && npc.type == NPCID.GiantBat)
 			{
 				Item.NewItem(npc.getRect(), ItemType<SquireBatAccessory>(), 1, prefixGiven: -1);
 			}
 
-			if (spawnChance < 0.33f && npc.type == NPCID.BigMimicHallow)
+			if (spawnChance < 0.20f && npc.type == NPCID.BigMimicHallow)
 			{
 				Item.NewItem(npc.getRect(), ItemType<StarSurferMinionItem>(), 1, prefixGiven: -1);
 			}
 
-			if (spawnChance < 0.33f && npc.type == NPCID.BigMimicCrimson)
+			if (spawnChance < 0.20f && npc.type == NPCID.BigMimicCrimson)
 			{
 				Item.NewItem(npc.getRect(), ItemType<NullHatchetMinionItem>(), 1, prefixGiven: -1);
 			}
 
-			if (spawnChance < 0.33f && npc.type == NPCID.BigMimicCorruption)
+			if (spawnChance < 0.20f && npc.type == NPCID.BigMimicCorruption)
 			{
 				Item.NewItem(npc.getRect(), ItemType<VoidKnifeMinionItem>(), 1, prefixGiven: -1);
 			}
 
-			if (spawnChance < 0.33f && npc.type == NPCID.GoblinSummoner)
+			if (spawnChance < 0.20f && npc.type == NPCID.GoblinSummoner)
 			{
 				Item.NewItem(npc.getRect(), ItemType<GoblinGunnerMinionItem>(), 1, prefixGiven: -1);
 			}
 
-			if (spawnChance < 0.10f && npc.type == NPCID.Eyezor)
+			if (spawnChance < 0.07f && npc.type == NPCID.Eyezor)
 			{
 				Item.NewItem(npc.getRect(), ItemType<SqueyereMinionItem>(), 1, prefixGiven: -1);
 			}
 
-			if (spawnChance < 0.03f && NPCSets.blueArmoredBones.Contains(npc.netID))
+			if (spawnChance < 0.008f && NPCSets.blueArmoredBones.Contains(npc.netID))
 			{
 				Item.NewItem(npc.getRect(), ItemType<ArmoredBoneSquireMinionItem>(), 1, prefixGiven: -1);
 			}
 
-			if (spawnChance < 0.025f && NPCSets.hellArmoredBones.Contains(npc.netID))
+			if (spawnChance < 0.008f && NPCSets.hellArmoredBones.Contains(npc.netID))
 			{
 				Item.NewItem(npc.getRect(), ItemType<CharredChimeraMinionItem>(), 1, prefixGiven: -1);
 			}
@@ -142,37 +142,9 @@ namespace AmuletOfManyMinions.NPCs
 			}
 
 			// drop from any enemy during a blood moon in pre-hardmode
-			if (spawnChance < 0.01f && npc.CanBeChasedBy() && !npc.SpawnedFromStatue && Main.bloodMoon && Main.hardMode)
+			if (spawnChance < 0.004f && npc.CanBeChasedBy() && !npc.SpawnedFromStatue && Main.bloodMoon && Main.hardMode)
 			{
 				Item.NewItem(npc.getRect(), ItemType<SlimepireMinionItem>(), 1, prefixGiven: -1);
-			}
-
-			if (!Main.expertMode)
-			{
-				if (spawnChance < 0.33f && npc.type == NPCID.Plantera)
-				{
-					Item.NewItem(npc.getRect(), ItemType<PottedPalMinionItem>(), 1, prefixGiven: -1);
-				}
-
-				if (spawnChance < 0.33f && npc.type == NPCID.QueenBee)
-				{
-					Item.NewItem(npc.getRect(), ItemType<BeeQueenMinionItem>(), 1, prefixGiven: -1);
-				}
-
-				if (npc.type == NPCID.SkeletronHead)
-				{
-					Item.NewItem(npc.getRect(), ItemType<BoneWaypointRod>(), 1);
-				}
-
-				if (spawnChance < 0.5f && npc.type == NPCID.SkeletronHead)
-				{
-					Item.NewItem(npc.getRect(), ItemType<SquireSkullAccessory>(), 1, prefixGiven: -1);
-				}
-
-				if (spawnChance < 0.25f && npc.type == NPCID.WallofFlesh)
-				{
-					Item.NewItem(npc.getRect(), ItemType<BoneSerpentMinionItem>(), 1, prefixGiven: -1);
-				}
 			}
 		}
 
